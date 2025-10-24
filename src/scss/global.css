@@ -1,1 +1,20 @@
-/*# sourceMappingURL=global.css.map */
+body {
+  background-color: rgb(116, 184, 87);
+}
+body header h1 {
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 1rem;
+  font-weight: 900;
+}
+body main h2 {
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+  font-weight: 900;
+}
+body #contentMain {
+  background-color: rgb(73, 138, 45);
+  width: 60%;
+  border-radius: 25px;
+}/*# sourceMappingURL=global.css.map */

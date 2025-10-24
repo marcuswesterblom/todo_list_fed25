@@ -10,6 +10,28 @@
     <script type="module" src="/src/main.js" defer></script>
   </head>
   <body>
-    <div id="app"></div>
+
+    <header id="containerHeader">
+      <div class="flex justify-center p-8">
+      <h1>My todo list</h1>
+      </div>
+    </header>
+
+    <main id="containerMain" class="flex justify-center">
+      <div id="contentMain" class="flex flex-col justify-center items-center p-8">
+
+        <h2>The Todos</h2>
+        <div id="containerList">
+        </div>
+
+        <h2>Finnished chores</h2>
+        <div id="containerFinishedChores">
+        </div>
+
+      </div>
+    </main>
+
+    <footer>
+    </footer>
   </body>
 </html>

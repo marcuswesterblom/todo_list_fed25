@@ -1,0 +1,5 @@
+@mixin primaryText($transform: uppercase, $spacing, $weight: 900) {
+    text-transform: $transform;
+    letter-spacing: $spacing;
+    font-weight: $weight;
+}

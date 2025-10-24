@@ -1,0 +1,23 @@
+@import "./variables";
+@import "./mixins";
+
+body {
+    background-color: $primary-BG-color;
+    header {
+        h1 {
+            color: $primary-text-color;
+            @include primaryText($spacing: 1rem);
+        }
+    }
+    main {
+        h2 {
+            color: $primary-text-color;
+            @include primaryText($spacing: 0.2rem);
+        } 
+    }
+    #contentMain {
+        background-color: $secondary-BG-color;
+        width: 60%;
+        border-radius: $border-radius;
+    }
+}
