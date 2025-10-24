@@ -1,5 +1,5 @@
 body {
-  background-color: rgb(116, 184, 87);
+  background-color: rgb(144, 206, 195);
 }
 body header h1 {
   color: white;
@@ -14,7 +14,109 @@ body main h2 {
   font-weight: 900;
 }
 body #contentMain {
-  background-color: rgb(73, 138, 45);
+  background-color: rgb(240, 199, 34);
   width: 60%;
   border-radius: 25px;
+}
+body #contentMain #todoLabel {
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+  font-weight: 900;
+}
+body #contentMain #todoInput {
+  border: 1px solid rgb(144, 206, 195);
+  background-color: white;
+  border-radius: 25px;
+  padding: 10px;
+  margin: 10px;
+  color: rgb(144, 206, 195);
+}
+body #contentMain #todoBttn {
+  color: white;
+  filter: drop-shadow(0px 0px 3px rgba(0, 0, 0, 0.237));
+  border: none;
+  padding: 15px;
+  background-image: linear-gradient(rgb(140, 255, 249), rgb(99, 203, 198));
+}
+body #contentMain #todoBttn:hover {
+  background-image: linear-gradient(rgb(99, 203, 198), rgb(140, 255, 249));
+  filter: drop-shadow(0px 0px 1px rgba(0, 0, 0, 0.237));
+}
+body #contentMain .containerTodos, body #contentMain .containerFinished {
+  min-width: 300px;
+  color: white;
+}
+body #contentMain .containerTodos #containerListEx, body #contentMain .containerFinished #containerListEx {
+  background-color: rgb(226, 181, 2);
+  padding: 20px;
+  border-radius: 25px;
+  margin: 20px;
+}
+body #contentMain .containerTodos #containerListEx ul, body #contentMain .containerFinished #containerListEx ul {
+  margin: 0 20px;
+}
+body #contentMain .containerTodos #containerListEx ul li, body #contentMain .containerFinished #containerListEx ul li {
+  padding: 10px;
+}
+body #contentMain .containerTodos #containerListEx ul li p, body #contentMain .containerFinished #containerListEx ul li p {
+  display: inline-block;
+  vertical-align: middle;
+}
+body #contentMain .containerTodos #containerListEx ul li input, body #contentMain .containerFinished #containerListEx ul li input {
+  margin-left: 10px;
+  height: 20px;
+  width: 20px;
+  cursor: pointer;
+  vertical-align: middle;
+}
+body #contentMain .containerTodos #containerListEx ul li::marker, body #contentMain .containerFinished #containerListEx ul li::marker {
+  font-size: 1.5rem;
+  color: rgb(243, 79, 79);
+}
+body #contentMain .containerTodos h3, body #contentMain .containerFinished h3 {
+  font-size: 1rem;
+  font-weight: 900;
+  margin-top: 20px;
+  margin-left: 20px;
+  color: rgba(255, 255, 255, 0.622);
+}
+body #contentMain .containerFinished {
+  background-color: rgb(226, 181, 2);
+  padding: 20px;
+  border-radius: 25px;
+  margin: 20px;
+}
+body #contentMain .containerFinished ul {
+  margin: 0 20px;
+}
+body #contentMain .containerFinished ul li {
+  padding: 10px;
+}
+body #contentMain .containerFinished ul li p {
+  display: inline-block;
+  vertical-align: middle;
+}
+body #contentMain .containerFinished ul li input {
+  margin-left: 10px;
+  height: 20px;
+  width: 20px;
+  cursor: pointer;
+  vertical-align: middle;
+}
+body #contentMain .containerFinished ul li::marker {
+  font-size: 1.5rem;
+  color: green;
+}
+body #contentMain .containerFinished ul li input {
+  accent-color: green;
+}
+body #contentMain .containerFinished h3 {
+  color: green;
+  font-size: 1rem;
+}
+body #contentMain .containerFinished p {
+  text-decoration-color: rgb(243, 79, 79);
+  display: inline-block;
+  vertical-align: middle;
 }/*# sourceMappingURL=global.css.map */

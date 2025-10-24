@@ -1,5 +1,14 @@
-@mixin primaryText($transform: uppercase, $spacing, $weight: 900) {
+@import "./variables";
+
+@mixin primaryText($transform: uppercase, $spacing: 1rem, $weight: 900) {
     text-transform: $transform;
     letter-spacing: $spacing;
     font-weight: $weight;
+}
+
+@mixin containerLists($bg-color: $container-BG-color, $padding: 20px, $radius: $border-radius, $margin: 20px){
+    background-color: $bg-color;
+    padding: $padding;
+    border-radius: $border-radius;
+    margin: $margin;
 }
