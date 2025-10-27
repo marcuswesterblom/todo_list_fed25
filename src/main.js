@@ -21,11 +21,6 @@ import "./style.css";
     const finishedList = document.createElement("ul");
     finishedList.classList.add("list-disc");
 
-        // Heading saying "Well done! You've finished all of your chores!" when all the boxes are checked
-    const youAreDoneText = document.createElement("h3");
-    youAreDoneText.textContent = "Well done! You've finished all of your chores!";
-    youAreDoneText.classList.add("youAreDone");
-
     containerFinished.appendChild(finishedList);
 
 // Hard-coded list
@@ -61,7 +56,6 @@ import "./style.css";
                 exampleList.appendChild(li);
                     // Remove Tailwind styling
                 text.classList.remove("line-through");
-
             }
                 // When there's more than 0 children (li) inside the finished ul(finishedList) containerFinished will have the class "show" (display:block). Otherwise it will remove the class "show" and go back to display: hidden
                 // containerFinished is only visible when finishedList contains li
@@ -72,19 +66,16 @@ import "./style.css";
             }
             if(exampleList.children.length > 0) {
                 containerListEx.classList.remove("hide");
-                youAreDoneText.classList.remove("show");
-                containerFinished.classList.remove("green");
             } else {
                 containerListEx.classList.add("hide");
-                youAreDoneText.classList.add("show");
-                containerFinished.appendChild(youAreDoneText);
-                containerFinished.classList.add("green");
             }
         });
     });
+    
     const containerListForm = document.getElementById("containerListForm");
     const todoInput = document.getElementById("todoInput");
     const todoBttn = document.getElementById("todoBttn");
+
     const formList = document.createElement("ul");
     formList.classList.add("list-disc");
 
@@ -112,7 +103,6 @@ import "./style.css";
                     // Remove Tailwind styling
                 inputValue.classList.remove("line-through");
             }
-
             if(finishedList.children.length > 0){
                 containerFinished.classList.add("show");
             } else {
@@ -123,19 +113,31 @@ import "./style.css";
             } else {
                 containerListForm.classList.add("show");
             }
+        });
+        
+        const removeBttn = document.createElement("div");
+        removeBttn.textContent = "Remove";
+        removeBttn.classList.add("removeBttn");
+
+        removeBttn.addEventListener("click" , () => {
+            formLi.remove();
+
             if(formList.children.length === 0) {
-            youAreDoneText.classList.add("show");
-            containerFinished.appendChild(youAreDoneText);
-            containerFinished.classList.add("green");
-            } else {
-            youAreDoneText.classList.remove("show");
-            containerFinished.classList.remove("green");
+                containerListForm.classList.remove("show");
+            }
+            if(finishedList.children.length === 0) {
+                containerFinished.classList.remove("show");
             }
         });
 
+        const liContent = document.createElement("div");
+        liContent.classList.add("li-content");
+
         formList.appendChild(formLi);
-        formLi.appendChild(inputValue);
-        formLi.appendChild(checkbox);
+        liContent.appendChild(inputValue);
+        liContent.appendChild(checkbox);
+        liContent.appendChild(removeBttn);
+        formLi.appendChild(liContent);
 
         if(formList.children.length > 0){
             containerListForm.classList.add("show");
@@ -144,5 +146,12 @@ import "./style.css";
             containerListForm.classList.remove("show");
         }
     }
+
+    const formSubmit = document.getElementById("todoForm");
+
+    formSubmit.addEventListener("submit", (e) => {
+            e.preventDefault();
+            handleClick();
+    });
 
     todoBttn.addEventListener("click", handleClick);

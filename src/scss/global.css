@@ -56,11 +56,24 @@ body #contentMain .containerTodos #containerListEx, body #contentMain #container
 body #contentMain .containerTodos #containerListEx.hide, body #contentMain #containerListForm #containerListEx.hide, body #contentMain .containerFinished #containerListEx.hide {
   display: none;
 }
+body #contentMain .containerTodos .removeBttn, body #contentMain #containerListForm .removeBttn, body #contentMain .containerFinished .removeBttn {
+  color: rgb(243, 79, 79);
+  font-weight: bold;
+  margin-left: 10px;
+  cursor: pointer;
+}
+body #contentMain .containerTodos .li-content, body #contentMain #containerListForm .li-content, body #contentMain .containerFinished .li-content {
+  display: inline-flex;
+  align-items: center;
+}
 body #contentMain .containerTodos ul, body #contentMain #containerListForm ul, body #contentMain .containerFinished ul {
   margin: 0 20px;
 }
 body #contentMain .containerTodos ul li, body #contentMain #containerListForm ul li, body #contentMain .containerFinished ul li {
   padding: 10px;
+}
+body #contentMain .containerTodos ul li.hide, body #contentMain #containerListForm ul li.hide, body #contentMain .containerFinished ul li.hide {
+  display: none;
 }
 body #contentMain .containerTodos ul li p, body #contentMain #containerListForm ul li p, body #contentMain .containerFinished ul li p {
   display: inline-block;
@@ -125,4 +138,18 @@ body #contentMain #containerListForm {
 }
 body #contentMain #containerListForm.show {
   display: block;
+}
+body #contentMain #containerExample {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+body #contentMain #containerExample .hideBttn {
+  color: white;
+  filter: drop-shadow(0px 0px 3px rgba(0, 0, 0, 0.237));
+  border: none;
+  padding: 15px;
+  background-color: transparent;
+  cursor: pointer;
 }/*# sourceMappingURL=global.css.map */
