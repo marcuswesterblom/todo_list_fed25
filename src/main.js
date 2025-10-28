@@ -1,154 +1,160 @@
 // class Todo - template for the todo-list
-import { Todo } from "./models/List";
+import { Todo } from "./models/list";
 import "./style.css";
 
-// Exampel list
-    const containerListEx = document.getElementById("containerListEx");
-        // Heading exampel list
-    const exampleListHeading = document.createElement("h3");
-    exampleListHeading.textContent = "Ex.";
-    exampleListHeading.classList.add("listExample");
-        // ul
-    const exampleList = document.createElement("ul");
-    exampleList.classList.add("list-disc");
+    // Container unfinished list
+    const containerList = document.getElementById("containerList");
+    // ul unfinished list
+    const ul = document.createElement("ul");
 
-    containerListEx.appendChild(exampleListHeading);
-    containerListEx.appendChild(exampleList);
+    containerList.appendChild(ul);
 
-// Finished List
+    // Container finished List
     const containerFinished = document.getElementById("containerFinished");
-        // ul
+    // ul finished list
     const finishedList = document.createElement("ul");
-    finishedList.classList.add("list-disc");
+
+    const youAreDoneText = document.createElement("h3");
+    youAreDoneText.textContent = "Well done! You've finished all of your chores!";
 
     containerFinished.appendChild(finishedList);
 
 // Hard-coded list
     const todos = [
-    new Todo("Städa", false),
-    new Todo("Handla mat", false),
-    new Todo("Gå ut med återvinning", false),
+    new Todo("Clean the house", false),
+    new Todo("Grocery shopping", false),
+    new Todo("Walk the dog", false),
 ];
-
-// forEach loop through hard-coded list
-    todos.forEach((todo) => {
-            // Create li
+// Function for every todo
+const todoList = (todo) => {
+        // Create li
         const li = document.createElement("li");
-            // Create input of the type "checkbox" added class for styling
+        // Create input of the type "checkbox" added class for styling
         const checkbox = document.createElement("input");
         checkbox.type = "checkbox";
         checkbox.classList.add("checkbox");
-            // Create p element with the value from the hard-coded list
+        // Create p-element with the value from the hard-coded list
         const text = document.createElement("p");
         text.innerHTML = todo.text;
+        // Create remove-button
+        const removeBttn = document.createElement("div");
+        removeBttn.textContent = "Remove";
+        removeBttn.classList.add("removeBttn");
+        // Create up-arrow for sorting list
+        const upBttn = document.createElement("span");
+        upBttn.innerHTML = "&#11014;";
+        upBttn.classList.add("moveBttn");
+        // Create down-arrow for sorting list
+        const downBttn = document.createElement("span");
+        downBttn.innerHTML = "&#11015;";
+        downBttn.classList.add("moveBttn");
         
+        li.appendChild(upBttn);
+        li.appendChild(downBttn);
         li.appendChild(text);
         li.appendChild(checkbox);
-        exampleList.appendChild(li);
-            // Eventlistener - When checkbox is checked li will be placed inside finished list otherwise in exampel-list
+        li.appendChild(removeBttn);
+
+        ul.appendChild(li);
+
+        // Checkbox eventListener, if checked put li in finished list otherwise in unfinished list
         checkbox.addEventListener("change", () => {
             todo.done = checkbox.checked;
             if(todo.done){
                 finishedList.appendChild(li);
                     // Tailwind styling
                 text.classList.add("line-through");
+
             } else {
-                exampleList.appendChild(li);
+                ul.appendChild(li);
                     // Remove Tailwind styling
                 text.classList.remove("line-through");
-            }
-                // When there's more than 0 children (li) inside the finished ul(finishedList) containerFinished will have the class "show" (display:block). Otherwise it will remove the class "show" and go back to display: hidden
-                // containerFinished is only visible when finishedList contains li
-            if (finishedList.children.length > 0) {
-                containerFinished.classList.add("show");
-            } else {
-                containerFinished.classList.remove("show");
-            }
-            if(exampleList.children.length > 0) {
-                containerListEx.classList.remove("hide");
-            } else {
-                containerListEx.classList.add("hide");
-            }
-        });
-    });
-    
-    const containerListForm = document.getElementById("containerListForm");
-    const todoInput = document.getElementById("todoInput");
-    const todoBttn = document.getElementById("todoBttn");
 
-    const formList = document.createElement("ul");
-    formList.classList.add("list-disc");
-
-    containerListForm.appendChild(formList);
-
-    function handleClick() {
-        const formLi = document.createElement("li");
-
-        const inputValue = document.createElement("p");
-        inputValue.textContent = todoInput.value;
-
-        const checkbox = document.createElement("input");
-        checkbox.type = "checkbox";
-        checkbox.classList.add("checkbox");
-
-        checkbox.addEventListener("change", () => {
-            const checkboxChecked = checkbox.checked;
-
-            if(checkboxChecked){
-                finishedList.appendChild(formLi);
-                    // Tailwind styling
-                inputValue.classList.add("line-through");
-            } else {
-                formList.appendChild(formLi);
-                    // Remove Tailwind styling
-                inputValue.classList.remove("line-through");
             }
             if(finishedList.children.length > 0){
                 containerFinished.classList.add("show");
             } else {
                 containerFinished.classList.remove("show");
             }
-            if(formList.children.length === 0) {
-                containerListForm.classList.remove("show");
+            if(ul.children.length > 0){
+                containerList.classList.remove("hide");
             } else {
-                containerListForm.classList.add("show");
+                containerList.classList.add("hide");
+            }
+            if(ul.children.length === 0){
+                containerFinished.classList.add("done");
+                containerFinished.appendChild(youAreDoneText);
+            } else {
+                containerFinished.classList.remove("done");
+                youAreDoneText.remove();
             }
         });
-        
-        const removeBttn = document.createElement("div");
-        removeBttn.textContent = "Remove";
-        removeBttn.classList.add("removeBttn");
-
+            // Remove-button eventListener
         removeBttn.addEventListener("click" , () => {
-            formLi.remove();
-
-            if(formList.children.length === 0) {
-                containerListForm.classList.remove("show");
-            }
-            if(finishedList.children.length === 0) {
+            // removes li when pressed
+            li.remove();
+            if(finishedList.children.length === 0){
                 containerFinished.classList.remove("show");
             }
+            if(ul.children.length === 0) {
+                containerList.classList.add("hide");
+                containerFinished.classList.add("done");
+                containerFinished.appendChild(youAreDoneText);
+            } else {
+                containerFinished.classList.remove("done");
+                youAreDoneText.remove();
+            }
         });
+        // Up-button eventListener
+        upBttn.addEventListener("click", () => {
+            const parentList = li.parentElement;
+            const before = li.previousElementSibling;
+            if(before) {
+                parentList.insertBefore(li, before);
+            }
+        });
+        // Down-button eventListener
+        downBttn.addEventListener("click", () => {
+            const parentList = li.parentElement;
+            const after = li.nextElementSibling;
+            if (after) {
+                parentList.insertBefore(after, li);
+            }
+        });
+}
 
-        const liContent = document.createElement("div");
-        liContent.classList.add("li-content");
+todos.forEach(todoList);
 
-        formList.appendChild(formLi);
-        liContent.appendChild(inputValue);
-        liContent.appendChild(checkbox);
-        liContent.appendChild(removeBttn);
-        formLi.appendChild(liContent);
+// function for when form button is pressed
+const handleClick = () => {
+        const todoInput = document.getElementById("todoInput");
 
-        if(formList.children.length > 0){
-            containerListForm.classList.add("show");
-            formList.appendChild(formLi);
+        const inputValue = todoInput.value;
+
+        if(inputValue === "") return;
+
+        const newTodo = new Todo(inputValue, false);
+        todos.push(newTodo);
+
+        todoList(newTodo);
+
+        containerList.classList.remove("hide");
+
+        todoInput.value = "";
+
+        if(ul.children.length === 0) {
+            containerList.classList.add("hide");
+            containerFinished.classList.add("done");
+            containerFinished.appendChild(youAreDoneText);
         } else {
-            containerListForm.classList.remove("show");
+            containerFinished.classList.remove("done");
+            youAreDoneText.remove();
         }
     }
 
     const formSubmit = document.getElementById("todoForm");
-
+    const todoBttn = document.getElementById("todoBttn");
+    
     formSubmit.addEventListener("submit", (e) => {
             e.preventDefault();
             handleClick();

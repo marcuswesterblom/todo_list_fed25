@@ -42,10 +42,10 @@ body {
                 }
             }
         .containerTodos {
-            min-width: 60%;
             color: $primary-text-color;
-            #containerListEx {
+            #containerList {
                 @include containerLists;
+                display: block;
                 &.hide {
                     display: none;
                 }
@@ -56,57 +56,38 @@ body {
                 margin-left: 10px;
                 cursor: pointer;
             }
-            .li-content {
-                display: inline-flex;
-                align-items: center;
-            }
-
             ul{
                 margin: 0 20px;
                 li{
-                    &.hide {
-                        display: none;
-                    }
+                    display: flex;
+                    align-items: center;
+                    gap: 10px;
                     padding: 10px;
-                    p {
-                        display: inline-block;
-                        vertical-align: middle;
+                    p{
+                        font-size: 16px;
+                        font-weight: 700;
                     }
                     input {
                         margin-left: 10px;
                         height: 20px;
                         width: 20px;
                         cursor: pointer;
-                        vertical-align: middle;
                     }
-                    &::marker {
-                        font-size: 1.5rem;
-                        color: rgb(243, 79, 79);
+                    .moveBttn {
+                        cursor: pointer;
+                        font-size: 25px;
+                        color: darken($color: $secondary-BG-color, $amount: 25);
                     }
                 }
-            }
-            h3 {
-                font-size: 1rem;
-                font-weight: 900;
-                margin-top: 20px;
-                margin-left: 20px;
-                color: rgba(255, 255, 255, 0.622);
             }
         }
         .containerFinished {
             @extend .containerTodos;
             @include containerLists;
             display: none;
+          
             &.show {
                 display: block;
-            }
-            &.green {
-                background-color: rgb(51, 209, 51);
-            }
-            li{
-                &::marker {
-                    color: $color-done !important;
-                }
             }
             input {
                 accent-color: $color-done;
@@ -114,38 +95,21 @@ body {
             h2 {
                 color: $color-done;
             }
+            h3 {
+                @include primaryText($spacing: 0.2rem);
+                color: $color-done;
+            }
             p {
                 text-decoration-color: rgb(243, 79, 79);
+                text-decoration-thickness: 2px;
             }
-            .youAreDone {
-                color: $color-done;
-                display: none;
-                &.show{
-                    display: block;
-                }
+            &.done {
+                background-color: rgb(33, 198, 33);
             }
-        }
-        #containerListForm {
-            @extend .containerTodos;
-            @include containerLists;
-            display: none;
-            &.show {
-                display: block;
+            .moveBttn {
+                color: darken($color: $color-done, $amount: 5) !important;
             }
-        }
-        #containerExample {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            .hideBttn {
-                color: $primary-text-color;
-                filter: drop-shadow(0px 0px 3px rgba(0, 0, 0, 0.237));
-                border: none;
-                padding: 15px;
-                background-color: transparent;
-                cursor: pointer;
-            }
-        }
     }
 }
+}
+

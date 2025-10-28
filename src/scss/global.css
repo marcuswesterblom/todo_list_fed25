@@ -43,59 +43,48 @@ body #contentMain #todoBttn:hover {
   background-image: linear-gradient(rgb(99, 203, 198), rgb(140, 255, 249));
   filter: drop-shadow(0px 0px 1px rgba(0, 0, 0, 0.237));
 }
-body #contentMain .containerTodos, body #contentMain #containerListForm, body #contentMain .containerFinished {
-  min-width: 60%;
+body #contentMain .containerTodos, body #contentMain .containerFinished {
   color: white;
 }
-body #contentMain .containerTodos #containerListEx, body #contentMain #containerListForm #containerListEx, body #contentMain .containerFinished #containerListEx {
+body #contentMain .containerTodos #containerList, body #contentMain .containerFinished #containerList {
   background-color: rgb(226, 181, 2);
   padding: 20px;
   border-radius: 25px;
   margin: 20px;
+  display: block;
 }
-body #contentMain .containerTodos #containerListEx.hide, body #contentMain #containerListForm #containerListEx.hide, body #contentMain .containerFinished #containerListEx.hide {
+body #contentMain .containerTodos #containerList.hide, body #contentMain .containerFinished #containerList.hide {
   display: none;
 }
-body #contentMain .containerTodos .removeBttn, body #contentMain #containerListForm .removeBttn, body #contentMain .containerFinished .removeBttn {
+body #contentMain .containerTodos .removeBttn, body #contentMain .containerFinished .removeBttn {
   color: rgb(243, 79, 79);
   font-weight: bold;
   margin-left: 10px;
   cursor: pointer;
 }
-body #contentMain .containerTodos .li-content, body #contentMain #containerListForm .li-content, body #contentMain .containerFinished .li-content {
-  display: inline-flex;
-  align-items: center;
-}
-body #contentMain .containerTodos ul, body #contentMain #containerListForm ul, body #contentMain .containerFinished ul {
+body #contentMain .containerTodos ul, body #contentMain .containerFinished ul {
   margin: 0 20px;
 }
-body #contentMain .containerTodos ul li, body #contentMain #containerListForm ul li, body #contentMain .containerFinished ul li {
+body #contentMain .containerTodos ul li, body #contentMain .containerFinished ul li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
   padding: 10px;
 }
-body #contentMain .containerTodos ul li.hide, body #contentMain #containerListForm ul li.hide, body #contentMain .containerFinished ul li.hide {
-  display: none;
+body #contentMain .containerTodos ul li p, body #contentMain .containerFinished ul li p {
+  font-size: 16px;
+  font-weight: 700;
 }
-body #contentMain .containerTodos ul li p, body #contentMain #containerListForm ul li p, body #contentMain .containerFinished ul li p {
-  display: inline-block;
-  vertical-align: middle;
-}
-body #contentMain .containerTodos ul li input, body #contentMain #containerListForm ul li input, body #contentMain .containerFinished ul li input {
+body #contentMain .containerTodos ul li input, body #contentMain .containerFinished ul li input {
   margin-left: 10px;
   height: 20px;
   width: 20px;
   cursor: pointer;
-  vertical-align: middle;
 }
-body #contentMain .containerTodos ul li::marker, body #contentMain #containerListForm ul li::marker, body #contentMain .containerFinished ul li::marker {
-  font-size: 1.5rem;
-  color: rgb(243, 79, 79);
-}
-body #contentMain .containerTodos h3, body #contentMain #containerListForm h3, body #contentMain .containerFinished h3 {
-  font-size: 1rem;
-  font-weight: 900;
-  margin-top: 20px;
-  margin-left: 20px;
-  color: rgba(255, 255, 255, 0.622);
+body #contentMain .containerTodos ul li .moveBttn, body #contentMain .containerFinished ul li .moveBttn {
+  cursor: pointer;
+  font-size: 25px;
+  color: rgb(137.188559322, 111.7372881356, 9.311440678);
 }
 body #contentMain .containerFinished {
   background-color: rgb(226, 181, 2);
@@ -107,49 +96,25 @@ body #contentMain .containerFinished {
 body #contentMain .containerFinished.show {
   display: block;
 }
-body #contentMain .containerFinished.green {
-  background-color: rgb(51, 209, 51);
-}
-body #contentMain .containerFinished li::marker {
-  color: green !important;
-}
 body #contentMain .containerFinished input {
   accent-color: green;
 }
 body #contentMain .containerFinished h2 {
   color: green;
 }
+body #contentMain .containerFinished h3 {
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+  font-weight: 900;
+  color: green;
+}
 body #contentMain .containerFinished p {
   text-decoration-color: rgb(243, 79, 79);
+  text-decoration-thickness: 2px;
 }
-body #contentMain .containerFinished .youAreDone {
-  color: green;
-  display: none;
+body #contentMain .containerFinished.done {
+  background-color: rgb(33, 198, 33);
 }
-body #contentMain .containerFinished .youAreDone.show {
-  display: block;
-}
-body #contentMain #containerListForm {
-  background-color: rgb(226, 181, 2);
-  padding: 20px;
-  border-radius: 25px;
-  margin: 20px;
-  display: none;
-}
-body #contentMain #containerListForm.show {
-  display: block;
-}
-body #contentMain #containerExample {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-body #contentMain #containerExample .hideBttn {
-  color: white;
-  filter: drop-shadow(0px 0px 3px rgba(0, 0, 0, 0.237));
-  border: none;
-  padding: 15px;
-  background-color: transparent;
-  cursor: pointer;
+body #contentMain .containerFinished .moveBttn {
+  color: rgb(0, 102.5, 0) !important;
 }/*# sourceMappingURL=global.css.map */
