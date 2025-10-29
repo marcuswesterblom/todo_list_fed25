@@ -38,7 +38,7 @@ const todoList = (todo) => {
         text.innerHTML = todo.text;
         // Create remove-button
         const removeBttn = document.createElement("div");
-        removeBttn.textContent = "Remove";
+        removeBttn.textContent = "X";
         removeBttn.classList.add("removeBttn");
         // Create up-arrow for sorting list
         const upBttn = document.createElement("span");

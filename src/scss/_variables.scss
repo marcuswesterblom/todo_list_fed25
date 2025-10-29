@@ -7,3 +7,6 @@ $secondary-bttn-color: rgb(99, 203, 198);
 $color-done: green;
 
 $border-radius: 25px;
+
+/* Breakpoints for media queries */
+$grid-breakpoints: (sm: 480px, md: 768px, lg: 800px);

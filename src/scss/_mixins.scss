@@ -12,3 +12,14 @@
     border-radius: $border-radius;
     margin: $margin;
 }
+
+@mixin verticalAlign ($inline-block: inline-block, $vertical-align: middle){
+    display: $inline-block;
+    vertical-align: $vertical-align;
+}
+
+@mixin respond($bp) {
+  @media (max-width: map-get($grid-breakpoints, $bp)) {
+    @content;
+  }
+}
