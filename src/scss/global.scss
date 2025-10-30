@@ -12,7 +12,10 @@ body {
      main {
         h2 {
             color: $primary-text-color;
+            padding:20px;
             @include primaryText($spacing: 0.2rem);
+            text-align: center;
+            background-color: rgb(20, 84, 81);
         } 
     }
     #contentMain {
@@ -20,11 +23,13 @@ body {
         border-radius: $border-radius;
         width: 90%;
         margin: 20px;
-        max-width: 800px;
+        max-width: 600px;
         #todoForm {
             display: flex;
+            justify-content: center;
+            align-items: center;
             @include respond(sm){
-                        flex-direction: column;
+                flex-direction: column;
             }
         }
         #todoLabel {
@@ -47,22 +52,27 @@ body {
             background-image: linear-gradient($primary-bttn-color, $secondary-bttn-color);
             &:hover {
                 background-image: linear-gradient( $secondary-bttn-color, $primary-bttn-color);
-                filter: drop-shadow(0px 0px 1px rgba(0, 0, 0, 0.237));
             }
         }
         .containerTodos {
             color: $primary-text-color;
+            
             #containerList {
-                @include containerLists;
+                @include containerLists($padding:0);
+                overflow: hidden;
                 display: block;
+                border: 1px solid rgba(255, 255, 255, 0.702);
+                filter: drop-shadow(5px 5px 5px rgba(114, 92, 2, 0.311));
                 &.hide {
-                        display: none;
+                    display: none;
                 }
             }
             ul{
                 li{
-                    min-width: 242px;
+                    min-width: 250px;
                     padding: 10px;
+                    background-image: linear-gradient(to right, rgba(172, 227, 231, 0.858), rgba(255, 255, 255, 0.562));
+                    border-top: 1px solid rgba(20, 84, 81, 0.146);
                     p{
                         font-size: 16px;
                         font-weight: 700;
@@ -78,12 +88,15 @@ body {
                     .moveBttn {
                         cursor: pointer;
                         font-size: 25px;
-                        color: darken($color: $secondary-BG-color, $amount: 25);
+                        color: rgb(20, 84, 81);
                         @include verticalAlign;
+                        &:hover {
+                            color: rgb(44, 125, 121);
+                        }
                     }
                     .removeBttn {
-                        color: rgb(243, 79, 79);
-                        font-weight: bold;
+                        height: 20px;
+                        width: 20px;
                         margin-left: 10px;
                         cursor: pointer;
                         @include verticalAlign;
@@ -93,20 +106,21 @@ body {
         }
         .containerFinished {
             @extend .containerTodos;
-            @include containerLists;
+            @include containerLists($padding:0);
+            overflow: hidden;
             display: none;
+            border: 1px solid rgba(255, 255, 255, 0.702);
+            filter: drop-shadow(5px 5px 5px rgba(114, 92, 2, 0.311));
             &.show {
                 display: block;
             }
             input {
                 accent-color: $color-done;
             } 
-            h2 {
-                color: $color-done;
-            }
             h3 {
                 @include primaryText($spacing: 0.2rem);
                 color: $color-done;
+                padding: 20px
             }
             p {
                 text-decoration-color: rgb(243, 79, 79);
@@ -115,11 +129,9 @@ body {
             &.done {
                 background-color: rgb(33, 198, 33);
             }
-            .moveBttn {
-                color: darken($color: $color-done, $amount: 5) !important;
-            }
         }
     }
 }
+
 
 

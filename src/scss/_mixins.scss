@@ -6,8 +6,7 @@
     font-weight: $weight;
 }
 
-@mixin containerLists($bg-color: $container-BG-color, $padding: 20px, $radius: $border-radius, $margin: 20px){
-    background-color: $bg-color;
+@mixin containerLists($padding: 20px, $radius: $border-radius, $margin: 20px){
     padding: $padding;
     border-radius: $border-radius;
     margin: $margin;

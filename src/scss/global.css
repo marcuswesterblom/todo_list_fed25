@@ -12,19 +12,24 @@ body header h1 {
 }
 body main h2 {
   color: white;
+  padding: 20px;
   text-transform: uppercase;
   letter-spacing: 0.2rem;
   font-weight: 900;
+  text-align: center;
+  background-color: rgb(20, 84, 81);
 }
 body #contentMain {
   background-color: rgb(240, 199, 34);
   border-radius: 25px;
   width: 90%;
   margin: 20px;
-  max-width: 800px;
+  max-width: 600px;
 }
 body #contentMain #todoForm {
   display: flex;
+  justify-content: center;
+  align-items: center;
 }
 @media (max-width: 480px) {
   body #contentMain #todoForm {
@@ -54,24 +59,27 @@ body #contentMain #todoBttn {
 }
 body #contentMain #todoBttn:hover {
   background-image: linear-gradient(rgb(99, 203, 198), rgb(140, 255, 249));
-  filter: drop-shadow(0px 0px 1px rgba(0, 0, 0, 0.237));
 }
 body #contentMain .containerTodos, body #contentMain .containerFinished {
   color: white;
 }
 body #contentMain .containerTodos #containerList, body #contentMain .containerFinished #containerList {
-  background-color: rgb(226, 181, 2);
-  padding: 20px;
+  padding: 0;
   border-radius: 25px;
   margin: 20px;
+  overflow: hidden;
   display: block;
+  border: 1px solid rgba(255, 255, 255, 0.702);
+  filter: drop-shadow(5px 5px 5px rgba(114, 92, 2, 0.311));
 }
 body #contentMain .containerTodos #containerList.hide, body #contentMain .containerFinished #containerList.hide {
   display: none;
 }
 body #contentMain .containerTodos ul li, body #contentMain .containerFinished ul li {
-  min-width: 242px;
+  min-width: 250px;
   padding: 10px;
+  background-image: linear-gradient(to right, rgba(172, 227, 231, 0.858), rgba(255, 255, 255, 0.562));
+  border-top: 1px solid rgba(20, 84, 81, 0.146);
 }
 body #contentMain .containerTodos ul li p, body #contentMain .containerFinished ul li p {
   font-size: 16px;
@@ -90,24 +98,29 @@ body #contentMain .containerTodos ul li input, body #contentMain .containerFinis
 body #contentMain .containerTodos ul li .moveBttn, body #contentMain .containerFinished ul li .moveBttn {
   cursor: pointer;
   font-size: 25px;
-  color: rgb(137.188559322, 111.7372881356, 9.311440678);
+  color: rgb(20, 84, 81);
   display: inline-block;
   vertical-align: middle;
 }
+body #contentMain .containerTodos ul li .moveBttn:hover, body #contentMain .containerFinished ul li .moveBttn:hover {
+  color: rgb(44, 125, 121);
+}
 body #contentMain .containerTodos ul li .removeBttn, body #contentMain .containerFinished ul li .removeBttn {
-  color: rgb(243, 79, 79);
-  font-weight: bold;
+  height: 20px;
+  width: 20px;
   margin-left: 10px;
   cursor: pointer;
   display: inline-block;
   vertical-align: middle;
 }
 body #contentMain .containerFinished {
-  background-color: rgb(226, 181, 2);
-  padding: 20px;
+  padding: 0;
   border-radius: 25px;
   margin: 20px;
+  overflow: hidden;
   display: none;
+  border: 1px solid rgba(255, 255, 255, 0.702);
+  filter: drop-shadow(5px 5px 5px rgba(114, 92, 2, 0.311));
 }
 body #contentMain .containerFinished.show {
   display: block;
@@ -115,14 +128,12 @@ body #contentMain .containerFinished.show {
 body #contentMain .containerFinished input {
   accent-color: green;
 }
-body #contentMain .containerFinished h2 {
-  color: green;
-}
 body #contentMain .containerFinished h3 {
   text-transform: uppercase;
   letter-spacing: 0.2rem;
   font-weight: 900;
   color: green;
+  padding: 20px;
 }
 body #contentMain .containerFinished p {
   text-decoration-color: rgb(243, 79, 79);
@@ -130,7 +141,4 @@ body #contentMain .containerFinished p {
 }
 body #contentMain .containerFinished.done {
   background-color: rgb(33, 198, 33);
-}
-body #contentMain .containerFinished .moveBttn {
-  color: rgb(0, 102.5, 0) !important;
 }/*# sourceMappingURL=global.css.map */
