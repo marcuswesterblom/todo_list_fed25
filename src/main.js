@@ -26,13 +26,15 @@ import "./style.css";
     new Todo("Walk the dog", false),
 ];
 // Function for every todo
-const todoList = (todo) => {
+const todoList = (todo, index) => {
         // Create li
         const li = document.createElement("li");
         // Create input of the type "checkbox" added class for styling
         const checkbox = document.createElement("input");
         checkbox.type = "checkbox";
         checkbox.classList.add("checkbox");
+        checkbox.id = `checkbox-${index}`;
+        checkbox.name = `checkbox-${index}`;
         // Create p-element with the value from the hard-coded list
         const text = document.createElement("p");
         text.innerHTML = todo.text;
@@ -138,7 +140,7 @@ const handleClick = () => {
         const newTodo = new Todo(inputValue, false);
         todos.push(newTodo);
 
-        todoList(newTodo);
+        todoList(newTodo, todos.length - 1);
 
         containerList.classList.remove("hide");
 

@@ -3,10 +3,29 @@
 body {
     background-color: $primary-BG-color;
     min-width: 320px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .wrapper {
+        width: 90%;
+        max-width: 600px;
+        background-color: $accent-color;
+        margin: 20px; 
+        border-radius: 25px;
+        overflow: hidden;
+    }
     header {
+        #containerHeader {
+            width: 90%;
+            max-width: 450px;
+        }
         h1 {
             color: $primary-text-color;
             @include primaryText;
+            padding: 20px;
+            background-color: #f77a32;
+            width: 100%;
+            border-radius: 0 0 25px 0;
         }
     }
      main {
@@ -15,7 +34,7 @@ body {
             padding:20px;
             @include primaryText($spacing: 0.2rem);
             text-align: center;
-            background-color: rgb(20, 84, 81);
+            background-color: $accent-color;
         } 
     }
     #contentMain {
@@ -28,7 +47,7 @@ body {
             display: flex;
             justify-content: center;
             align-items: center;
-            @include respond(sm){
+            @include respond(md){
                 flex-direction: column;
             }
         }
@@ -56,25 +75,31 @@ body {
         }
         .containerTodos {
             color: $primary-text-color;
-            
             #containerList {
-                @include containerLists($padding:0);
-                overflow: hidden;
+                @include containerLists;
+                margin-top: 20px;
                 display: block;
-                border: 1px solid rgba(255, 255, 255, 0.702);
-                filter: drop-shadow(5px 5px 5px rgba(114, 92, 2, 0.311));
+                background-image: linear-gradient(to right, rgba(172, 227, 231, 0.858), rgba(255, 255, 255, 0.562));
                 &.hide {
                     display: none;
                 }
             }
             ul{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                    padding-bottom: 10px;
                 li{
-                    min-width: 250px;
                     padding: 10px;
-                    background-image: linear-gradient(to right, rgba(172, 227, 231, 0.858), rgba(255, 255, 255, 0.562));
                     border-top: 1px solid rgba(20, 84, 81, 0.146);
+                    @include respond(sm) {
+                        text-align: center;
+                        max-width: 170px;
+                    }
                     p{
                         font-size: 16px;
+                        margin: 10px;
                         font-weight: 700;
                         @include verticalAlign;
                     }
@@ -88,7 +113,7 @@ body {
                     .moveBttn {
                         cursor: pointer;
                         font-size: 25px;
-                        color: rgb(20, 84, 81);
+                        color: $accent-color;
                         @include verticalAlign;
                         &:hover {
                             color: rgb(44, 125, 121);
@@ -106,11 +131,10 @@ body {
         }
         .containerFinished {
             @extend .containerTodos;
-            @include containerLists($padding:0);
-            overflow: hidden;
+            @include containerLists;
+            margin-top: 20px;
+            background-image: linear-gradient(to right, rgba(172, 227, 231, 0.858), rgba(255, 255, 255, 0.562));
             display: none;
-            border: 1px solid rgba(255, 255, 255, 0.702);
-            filter: drop-shadow(5px 5px 5px rgba(114, 92, 2, 0.311));
             &.show {
                 display: block;
             }

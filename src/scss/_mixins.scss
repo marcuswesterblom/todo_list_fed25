@@ -6,10 +6,12 @@
     font-weight: $weight;
 }
 
-@mixin containerLists($padding: 20px, $radius: $border-radius, $margin: 20px){
-    padding: $padding;
+@mixin containerLists(){
     border-radius: $border-radius;
-    margin: $margin;
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.702);
+    filter: drop-shadow(5px 5px 5px rgba(114, 92, 2, 0.311));
+
 }
 
 @mixin verticalAlign ($inline-block: inline-block, $vertical-align: middle){
