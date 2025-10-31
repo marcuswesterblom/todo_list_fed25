@@ -13,6 +13,8 @@ body {
         margin: 20px; 
         border-radius: 25px;
         overflow: hidden;
+        border: 1px solid  rgb(255, 255, 255);
+        filter: drop-shadow(5px 5px 9px rgba(0, 0, 0, 0.126));
     }
     header {
         #containerHeader {
@@ -26,6 +28,8 @@ body {
             background-color: #f77a32;
             width: 100%;
             border-radius: 0 0 25px 0;
+            border-bottom: 10px solid $secondary-BG-color;
+            border-right: 10px solid $secondary-BG-color;
         }
     }
      main {
@@ -89,7 +93,7 @@ body {
                 flex-direction: column;
                 justify-content: center;
                 align-items: center;
-                    padding-bottom: 10px;
+                padding-bottom: 10px;
                 li{
                     padding: 10px;
                     border-top: 1px solid rgba(20, 84, 81, 0.146);
