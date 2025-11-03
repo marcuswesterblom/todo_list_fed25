@@ -48,8 +48,8 @@ för att köra projektet.
 ## 🔍 ESLint-varningar:
 
 
-## 🏆 **Betyg: IG**
-📌 **Motivering:** Tekniskt fel vid AI-analys. Kontrollera manuellt.
+## 🏆 **Betyg: VG**
+📌 **Motivering:** Alla krav, både för G och VG, är väl implementerade med en tydlig struktur och funktionalitet. Projektet innehåller även ett grafiskt ramverk och avancerad funktionalitet som sortering och återaktivering av listas poster.
 
 💡 **Förbättringsförslag:**  
-Automatisk rättning med AI-assistant misslyckades. Vänligen kontrollera koden manuellt.
+Koden skulle kunna förbättras genom att lägga till fler kommentarer för att underlätta för förståelse och framtida underhåll av projektet. Dessutom kan enhetstester vara lämpliga att inkludera för att säkerställa robusthet.
