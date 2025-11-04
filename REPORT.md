@@ -48,8 +48,8 @@ för att köra projektet.
 ## 🔍 ESLint-varningar:
 
 
-## 🏆 **Betyg: VG**
-📌 **Motivering:** Projektet uppfyller alla specifikationer för både G och VG kraven, med en stark implementering och användning av ett grafiskt ramverk.
+## 🏆 **Betyg: G**
+📌 **Motivering:** Koden uppfyller majoriteten av G-kraven med välstrukturerad presentation och enkel interaktion. Projektet använder TailwindCSS, uppvisar användarvänlig interaktivitet och kan hantera todo-statuser effektivt.
 
 💡 **Förbättringsförslag:**  
-Lägg till mer omfattande dokumentation för att underlätta för nya användare.
+För att nå VG bör funktionalitet för att sortera todo-uppgifter införas. Till exempel en drag-och-släpp-funktion eller sortering baserad på kriterier som datum eller prioritet. En metod för sortering kan implementeras genom att lägga till logik i `main.js` där `todos`-listan hanteras.
