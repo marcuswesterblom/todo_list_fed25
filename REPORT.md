@@ -48,8 +48,8 @@ för att köra projektet.
 ## 🔍 ESLint-varningar:
 
 
-## 🏆 **Betyg: VG**
-📌 **Motivering:** Projektet uppfyller alla krav för både betyg G och VG. Koden är välstrukturerad och effektivt presenterar och hanterar todos.
+## 🏆 **Betyg: IG**
+📌 **Motivering:** Tekniskt fel vid AI-analys. Kontrollera manuellt.
 
 💡 **Förbättringsförslag:**  
-Ingen större förbättring behövs, men koden kan ytterligare förbättras genom att lägga till fler kommentarer och refaktorisering för bättre läsbarhet.
+Automatisk rättning med AI-assistant misslyckades. Vänligen kontrollera koden manuellt.
