@@ -49,7 +49,7 @@ för att köra projektet.
 
 
 ## 🏆 **Betyg: VG**
-📌 **Motivering:** Koden uppfyller alla krav för VG, inklusive att kunna hantera både klara och oklara todo-punkter, tillhandahålla ett formulär för nya todos, och använda ett grafiskt ramverk. Kodstrukturen är god och tillåter framtida utbyggnad.
+📌 **Motivering:** Alla funktionalitet och krav för både G och VG är uppfyllda på ett gediget och korrekt sätt. Projektet är välstrukturerat med bra kodstruktur och uppfyller alla uppgiftens kriterier.
 
 💡 **Förbättringsförslag:**  
-Implementera användargränssnittskontroller för att sortera todo-punkter för bättre användarupplevelse.
+Kanske undersöka möjligheten till djupare integration med fler funktioner, t.ex. drag-and-drop-sortering, eller utökat testspektrum för att säkerställa robusthet. Allmänna kodkvalitetsförbättringar kan innefatta förbättringar av kommentering, och ökad användning av responsiv design för bättre användbarhet på mobil.
