@@ -49,7 +49,7 @@ för att köra projektet.
 
 
 ## 🏆 **Betyg: VG**
-📌 **Motivering:** Alla krav, både för G och VG, är väl implementerade med en tydlig struktur och funktionalitet. Projektet innehåller även ett grafiskt ramverk och avancerad funktionalitet som sortering och återaktivering av listas poster.
+📌 **Motivering:** Projektet uppfyller alla krav för både betygen G och VG. Koden är välstrukturerad, användargränssnittet är funktionellt och estetiskt tilltalande genom användning av Tailwind CSS. Alla funktionaliteter för en komplett todo-applikation finns implementerade.
 
 💡 **Förbättringsförslag:**  
-Koden skulle kunna förbättras genom att lägga till fler kommentarer för att underlätta för förståelse och framtida underhåll av projektet. Dessutom kan enhetstester vara lämpliga att inkludera för att säkerställa robusthet.
+Koden kan förbättras genom att lägga till mer detaljerade kommentarer för att förklara koden i de olika modulerna. Dessutom kan testfall för olika användarscenarion implementeras för att säkerställa robustheten av appen.
