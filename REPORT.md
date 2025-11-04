@@ -49,7 +49,7 @@ för att köra projektet.
 
 
 ## 🏆 **Betyg: VG**
-📌 **Motivering:** Studenten har implementerat alla krav för både betyg G och VG på ett korrekt sätt. Projektet är strukturerat och anpassar ett CSS-ramverk effektivt.
+📌 **Motivering:** Koden uppfyller alla G och VG-krav. Projektet visar en god förståelse för Javascript och CSS-ramverk och implementerar alla funktioner som specificerade, inklusive sortering och hantering av todo-listan.
 
 💡 **Förbättringsförslag:**  
-Framtida fokus kan vara kodoptimering och förbättrad felhantering.
+Inga stora förbättringar behövs. Projektet hade kunnat förbättras ytterligare genom att införa mer avancerad felhantering och tillgänglighet överväganden för en bredare användarbas.
