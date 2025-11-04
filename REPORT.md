@@ -49,7 +49,7 @@ för att köra projektet.
 
 
 ## 🏆 **Betyg: VG**
-📌 **Motivering:** Projektet uppfyller alla krav för både betygen G och VG. Koden är välstrukturerad, användargränssnittet är funktionellt och estetiskt tilltalande genom användning av Tailwind CSS. Alla funktionaliteter för en komplett todo-applikation finns implementerade.
+📌 **Motivering:** Projektet uppfyller alla krav för både betyg G och VG. Koden är välstrukturerad och effektivt presenterar och hanterar todos.
 
 💡 **Förbättringsförslag:**  
-Koden kan förbättras genom att lägga till mer detaljerade kommentarer för att förklara koden i de olika modulerna. Dessutom kan testfall för olika användarscenarion implementeras för att säkerställa robustheten av appen.
+Ingen större förbättring behövs, men koden kan ytterligare förbättras genom att lägga till fler kommentarer och refaktorisering för bättre läsbarhet.
