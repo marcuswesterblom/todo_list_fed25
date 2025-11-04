@@ -49,7 +49,7 @@ för att köra projektet.
 
 
 ## 🏆 **Betyg: VG**
-📌 **Motivering:** Projektet uppfyller både G och VG-kraven, erbjuder ett komplett och funktionellt gränssnitt med användning av Tailwind CSS.
+📌 **Motivering:** Projektet uppfyller alla specifikationer för både G och VG kraven, med en stark implementering och användning av ett grafiskt ramverk.
 
 💡 **Förbättringsförslag:**  
-Fokusera på tillgänglighetsfrågor och semantisk HTML för framtida förbättringar.
+Lägg till mer omfattande dokumentation för att underlätta för nya användare.
