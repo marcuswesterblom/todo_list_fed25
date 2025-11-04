@@ -49,7 +49,7 @@ för att köra projektet.
 
 
 ## 🏆 **Betyg: VG**
-📌 **Motivering:** Koden uppfyller alla G och VG-krav. Projektet visar en god förståelse för Javascript och CSS-ramverk och implementerar alla funktioner som specificerade, inklusive sortering och hantering av todo-listan.
+📌 **Motivering:** Koden uppfyller alla krav för VG, inklusive att kunna hantera både klara och oklara todo-punkter, tillhandahålla ett formulär för nya todos, och använda ett grafiskt ramverk. Kodstrukturen är god och tillåter framtida utbyggnad.
 
 💡 **Förbättringsförslag:**  
-Inga stora förbättringar behövs. Projektet hade kunnat förbättras ytterligare genom att införa mer avancerad felhantering och tillgänglighet överväganden för en bredare användarbas.
+Implementera användargränssnittskontroller för att sortera todo-punkter för bättre användarupplevelse.
