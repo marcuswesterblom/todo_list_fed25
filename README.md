@@ -1,42 +1,38 @@
-[![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-22041afd0340ce965d47ae6ef1cefeee28c7c493a6346c4f15d667ab976d596c.svg)](https://classroom.github.com/a/R4VHVPzD)
-# Inlämningsuppgift Todo
+# 📝 Todo List — FED25 School Project
 
-I denna inlämningsuppgift kommer ni att skapa er egen todo-lista.
-Sidan skall visa ett antal punkter som skall göras. Dessa skall då komma upp på skärmen i form av en lista. När uppgiften är slutförd skall användaren kunna markera uppgiften som slutförd och uppgiften skall då tas bort från listan.
+This is a **Todo List application** built as part of a school assignment in the **Frontend Developer 25 (FED25)** program.
 
-## Betyg G
+The goal of the project was to practice core frontend skills such as JavaScript, DOM manipulation, event handling, and basic project structure using modern tooling.
 
-- Skapa en hårdkodad lista med punkter att göra (hitta på egna punkter)
-- Presentera denna på skärmen, helst med lite kontroll. Detta betyder i en html-struktur t.ex. i en ul/li-lista
-- Implementera klickhändelse för att hantera borttagandet av en todo.
-- Todo tas bort från skärmen och **markeras som klar i javascript-listan**.
-- Implementera ett valfritt grafiskt ramverk till din todolista, t.ex. bootstrap, material ui, tailwind eller liknande :)
+---
 
-## Betyg VG
+## 🚀 Features
 
-- Alla punkter under G
-- Kunna visa även klara händelser och klicka tillbaka den så att de blir oklara igen.
-- Skapa ett formulär som tillåter att en användare skapar nya todos efterhand.
-- Kunna sortera ordningen på dina todos
+- Add tasks to a todo list
+- Mark tasks as completed
+- Remove tasks from the list
+- Dynamic rendering using JavaScript
+- Responsive layout for different screen sizes
 
-## Allmänt
+---
 
-Projektet ni har är ett vite-projekt. D.v.s. ni måste köra:
+## 🧠 What I Learned
 
-```shell
-npm i
-```
+Through this project, I practiced and improved my understanding of:
 
-och
+- JavaScript DOM manipulation
+- Handling user events (clicks, forms, etc.)
+- Structuring a small frontend project
+- Separating logic, styles, and markup
+- Using a modern development environment with Vite
 
-```shell
-npm run dev 
-```
+---
 
-för att köra projektet.
+## 🛠️ Technologies Used
 
-- Det finns många sätt att lösa denna uppgift på. Om ni känner er osäkra på någonting, fråga hellre någon gång för mycket så att ni känner er säkra på vad ni utvecklar.
-- Ni får gärna ändra strukturen i projektet, detta är bara en grund.
-- Börja med att planera ert arbete, börja inte med Visual Studio Code, även om det är lockande.
-- Gör ert bästa att inte stressa. Lättare sagt än gjort, jag vet. Men ingen mår bättre av att stressa.
-- Ha roligt, skratta när det blir fel och fortsätt att vara nyfiken :)
+- **JavaScript**
+- **HTML**
+- **CSS**
+- **Vite** (development server and build tool)
+
+---
