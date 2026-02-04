@@ -1,5 +1,5 @@
 // class Todo - template for the todo-list
-import { Todo } from "./models/list.js";
+import { Todo } from "./models/List.js";
 import "./style.css";
 import { getFromLocalStorage, saveToLocalStorage } from "./utils/storage.js";
 import { todoList } from "./utils/todolist.js";
