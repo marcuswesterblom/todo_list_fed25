@@ -1,4 +1,4 @@
-import { Todo } from "../models/list.js";
+import { Todo } from "../models/List.js";
 // Local storage
 
 // Save in local storage
